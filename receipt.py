@@ -10,6 +10,12 @@ BASIC_TAX_RATE = float(10 / 100)
 IMPORT_TAX_RATE = float(5 / 100)
 
 # A non-exhaustive set of products to exempt from basic tax based on test data.
+# NOTE: ASSUMPTION MADE:
+# I could only work with the data given thus I made the following assumptions
+# a) Non-Taxable products have atleast one of the following words `
+#           book`, `chocolate`, `food`, `medicine`, `drug`, `pill`
+# b) Imported goods have the word `import` in the product description.
+
 BASIC_TAX_EXEMPTION_SET = {
     # Books
     "book",
